@@ -1,140 +1,91 @@
-<!DOCTYPE html>
-<!-- Template by html.am -->
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>2 Column Layout &mdash; Left Menu with Header &amp; Footer</title>
-		<style type="text/css">
-		
-			body {
-				margin:0;
-				padding:0;
-				font-family: Sans-Serif;
-				line-height: 1.5em;
-			}
-			
-			#header {
-				background: #ccc;
-				height: 100px;
-			}
-			
-			#header h1 {
-				margin: 0;
-				padding-top: 15px;
-			}
-			
-			main {
-				padding-bottom: 10010px;
-				margin-bottom: -10000px;
-				float: left;
-				width: 100%;
-			}
-			
-			#nav {
-				padding-bottom: 10010px;
-				margin-bottom: -10000px;
-				float: left;
-				width: 230px;
-				margin-left: -100%;
-				background: #eee;
-			}
-			
-			#footer {
-				clear: left;
-				width: 100%;
-				background: #ccc;
-				text-align: center;
-				padding: 4px 0;
-			}
-	
-			#wrapper {
-				overflow: hidden;
-			}
-						
-			#content {
-				margin-left: 230px; /* Same as 'nav' width */
-			}
-			
-			.innertube {
-				margin: 15px; /* Padding for content */
-				margin-top: 0;
-			}
-		
-			p {
-				color: #555;
-			}
-	
-			nav ul {
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			
-			nav ul a {
-				color: darkgreen;
-				text-decoration: none;
-			}
-		
-		</style>
-		
-		<script type="text/javascript">
-			/* =============================
-			This script generates sample text for the body content. 
-			You can remove this script and any reference to it. 
-			 ============================= */
-			var bodyText=[""]
-			function generateText(sentenceCount){
-				for (var i=0; i<sentenceCount; i++)
-				document.write(bodyText[Math.floor(Math.random()*7)]+" ")
-			}
-		</script>	
-	
-	</head>
-	
-	<body>		
+ margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #FFDAB9;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
 
-		<header id="header">
-			<div class="innertube">
-				<h1>Men's Sizing</h1>
-			</div>
-		</header>
-		
-		<div id="wrapper">
-		
-			<main>
-				<div id="content">
-					<div class="innertube">
-					
-					</div>
-				</div>
-			</main>
-			
-			<nav id="nav">
-				<div class="innertube">
-					<h3>Men's Sizing</h3>
-					<ul>
-						<li><a href="#">Men's shoes</a></li>
-						<li><a href="#">Men' shirts</a></li>
-						<li><a href="#">Men's uniforms</a></li>
-						<li><a href="#">Men's Pants</a></li>
-						<li><a href="#">Men's swimwear</a></li>
-						<li><a href="#">Men' big and tall</a></li>
-						<li><a href="#">Men's suits</a></li>
-						<li><a href="#">Men's shorts</a></li>
-						
-					</ul>
-					
-					</ul>
-				</div>
-			</nav>
-		
-		</div>
-		
-		<footer id="footer">
-			<div class="innertube">
-				<p></p>
-			</div>
-		</footer>
-	
-	</body>
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #b36200;
+  color: black;
+}
+
+/* Main content */
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+</style>
+</head>
+<body>
+
+
+<div class="main">
+  
+</div>
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+
+      <h2 style="text-align:center">Welcome to HappyTank</h2>
+            <h2 style="text-align:center">Login with Social Media or Manually</h2>
+
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
+
+      <div class="col">
+        <a href="#" class="fb btn">
+          <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+         </a>
+        <a href="#" class="twitter btn">
+          <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+        </a>
+        <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+          </i> Login with Google+
+        </a>
+      </div>
+
+      <div class="col">
+        <div class="hide-md-lg">
+          <p>Or sign in manually:</p>
+        </div>
+
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+      </div>
+      
+    </div>
+  </form>
+</div>
+
+
+
+</body>
 </html>
+
